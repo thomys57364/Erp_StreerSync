@@ -62,3 +62,41 @@ body {
     transform: scale(1.03);
   }
   
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: fadeIn 0.8s ease forwards;
+  }
+  
+  
+
+
+@keyframes glowSlide {
+    0% {
+      background-position: 0% 50%;
+      box-shadow: 0 0 5px red;
+    }
+    50% {
+      background-position: 100% 50%;
+      box-shadow: 0 0 20px red;
+    }
+    100% {
+      background-position: 0% 50%;
+      box-shadow: 0 0 5px red;
+    }
+  }
+  
+  .animar-glow {
+    animation: glowSlide 1.2s ease-in-out;
+    background: linear-gradient(270deg, #fff, #ffe6e6, #fff);
+    background-size: 400% 400%;
+    box-shadow: 0 0 15px red;
+    border: 2px solid red;
+  }
