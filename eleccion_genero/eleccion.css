@@ -33,9 +33,32 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rem; /* Espacio entre los elementos de selección */
-    margin: 5rem 0; /* Espacio entre la sección de selección y otros elementos */
+    gap: 2rem; /* Espacio entre los elementos de selección */
+    margin: 3rem 0; /* Espacio entre la sección de selección y otros elementos */
 }
 .seleccion img{
-    border-radius: 8%;
+    border-radius: 4%;
+    margin: 3rem 0;
+    width: 565px; /* Ancho de la imagen */
 }
+
+.generos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem; /* ajusta el espacio entre imágenes */
+    margin-top: 3rem;
+  }
+  
+  .genero {
+    border-radius: 4%;
+    width: 600px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .genero:hover {
+    transform: scale(1.03);
+  }
+  
