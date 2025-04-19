@@ -4,48 +4,65 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
-  }
-  
-  .superior-section {
+}
+
+.superiror-section {
     position: relative;
-  }
-  
-  .seleccion {
+}
+
+.seleccion {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 10rem;
     padding: 1rem 2rem;
-  }
-  
-  .titulo {
+}
+
+.titulo {
     font-size: 2.5rem;
     font-weight: bold;
     color: black;
-  }
-  
-  .seleccionar-genero {
+}
+
+.seleccionar-genero {
     display: flex;
     gap: 3rem;
     font-weight: 700;
     cursor: pointer;
-  }
-  
-  .seleccionar-genero .seleccion2 {
-    font-size: 1.5rem;
-    color: black;
-  }
-  
-  .btn-inicio {
+}
+
+.seleccion1, .seleccion2 {
+    position: relative;
+    overflow: visible;
+    padding-bottom: 6px;
+}
+
+.seleccion1::after, .seleccion2::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: black; /* Color de la línea */
+    left: 50%;
+    bottom: -2px;
+    transform: translateX(-50%);
+    transition: width 0.4s ease;
+}
+
+.seleccion1:hover::after, .seleccion2:hover::after {
+    width: 100%;
+}
+
+.btn-inicio {
     display: flex;
     position: absolute;
     top: 1.5rem;
     right: 2rem;
     align-items: center;
     gap: 0.5rem;
-  }
-  
-  .btn-white {
+}
+
+.btn-white {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -57,77 +74,75 @@
     font-weight: bold;
     font-size: 1.2rem;
     cursor: pointer;
-  }
-  
-  .elecciones {
+}
+
+.elecciones {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
-    margin: 2rem auto;
-    max-width: 1800px;
-    padding: 0;
-  }
-  
-  .elecciones img {
-    width: 23%;
-    min-width: 400px;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.elecciones img {
+    width: 18%;
+    min-width: 150px;
     height: auto;
     border-radius: 8px;
     cursor: pointer;
     transition: transform 0.4s ease;
-  }
-  
-  .elecciones img:hover {
-    transform: scale(1.1);
-  }
-  
-  .feed {
+}
+
+.elecciones img:hover {
+    transform: scale(1.05);
+}
+
+.feed {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 8rem;
     padding: 0;
-  }
-  
-  .feed img {
-    width: 90%;
-    max-width: 1730px; 
+}
+
+.feed img {
+    width: 100%;
+    max-width: 1900px;
     height: auto;
     border-radius: 8px;
     cursor: pointer;
     transition: transform 0.3s ease;
-  }
-  
-  /* Responsive */
-  @media screen and (max-width: 1700px) {
+}
+
+/* Responsive */
+@media screen and (max-width: 1700px) {
     .elecciones {
-      gap: 1rem;
+        gap: 1rem;
     }
-  
+
     .elecciones img {
-      width: 45%;
-      min-width: 300px;
+        width: 45%;
+        min-width: 300px;
     }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .elecciones img {
-      width: 90%;
-      min-width: 200px;
+}
+
+@media screen and (max-width: 768px) {
+    .btn-inicio {
+        position: static;
+        margin-top: 1rem;
+        justify-content: center;
     }
-  }
-  
-  /* Fade-in */
-  .fade-in {
+}
+
+/* Fade-in */
+.fade-in {
     opacity: 0;
     animation: fadeIn 0.6s ease forwards;
-  }
-  
-  @keyframes fadeIn {
+}
+
+@keyframes fadeIn {
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
+}
