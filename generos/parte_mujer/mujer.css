@@ -10,12 +10,17 @@
     position: relative;
 }
 
+.barra-superior {
+    position: relative;
+}
+
 .seleccion {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 10rem;
     padding: 1rem 2rem;
+    flex-wrap: wrap;
 }
 
 .titulo {
@@ -30,11 +35,12 @@
     gap: 3rem;
     font-weight: 700;
     cursor: pointer;
+    flex-wrap: wrap;
 }
 
-  /* Agregado para que Mujer y Hombre se vean bien */
+/* Mejorar mujer y hombre */
 .seleccionar-genero h2 {
-    font-size: 1.5rem; /* Tamaño visible */
+    font-size: 1.5rem;
     font-weight: 700;
     color: black;
 }
@@ -50,7 +56,7 @@
     position: absolute;
     width: 0;
     height: 2px;
-    background-color: black; /* Color de la línea */
+    background-color: black;
     left: 50%;
     bottom: -2px;
     transform: translateX(-50%);
@@ -61,15 +67,17 @@
     width: 100%;
 }
 
-.btn-inicio {
+/* CONTENEDOR DE BOTONES */
+.btns-superior {
     display: flex;
+    align-items: center;
+    gap: 1rem;
     position: absolute;
     top: 1.5rem;
     right: 2rem;
-    align-items: center;
-    gap: 0.5rem;
 }
 
+/* ESTILO DE BOTONES */
 .btn-white {
     display: flex;
     align-items: center;
@@ -78,10 +86,18 @@
     color: black;
     border: 1px solid black;
     border-radius: 50px;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.2rem;
     font-weight: bold;
     font-size: 1.2rem;
     cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover elegante */
+.btn-white:hover {
+    background-color: black;
+    color: white;
 }
 
 .elecciones {
@@ -116,7 +132,7 @@
 
 .feed img {
     width: 100%;
-    max-width: 1790px;
+    max-width: 1200px;
     height: auto;
     border-radius: 8px;
     cursor: pointer;
@@ -126,67 +142,68 @@
 /* Responsive ajustes */
 @media screen and (max-width: 1700px) {
     .elecciones img {
-    width: 45%;
-    min-width: 300px;
+        width: 45%;
+        min-width: 300px;
     }
 }
 
 @media screen and (max-width: 1024px) {
     .seleccion {
-    gap: 4rem;
-    justify-content: center;
-    text-align: center;
+        gap: 4rem;
+        justify-content: center;
+        text-align: center;
     }
 
     .seleccionar-genero {
-    gap: 2rem;
-    justify-content: center;
+        gap: 2rem;
+        justify-content: center;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .btn-inicio {
-    position: static;
-    margin-top: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
+    .btns-superior {
+        position: static;
+        margin-top: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
     .seleccion {
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-    text-align: center;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        text-align: center;
     }
 
     .seleccionar-genero {
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
-    text-align: center;
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+        text-align: center;
     }
 
     .elecciones img {
-    width: 80%;
-    min-width: unset;
+        width: 80%;
+        min-width: unset;
     }
 
     .feed img {
-    width: 90%;
+        width: 90%;
     }
 }
 
 @media screen and (max-width: 480px) {
     .elecciones img {
-    width: 100%;
+        width: 100%;
     }
 
     .feed img {
-    width: 100%;
+        width: 100%;
     }
 }
 
-  /* Fade-in */
+/* Animación de fade-in */
 .fade-in {
     opacity: 0;
     animation: fadeIn 0.6s ease forwards;

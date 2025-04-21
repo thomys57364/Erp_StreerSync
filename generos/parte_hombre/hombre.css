@@ -10,6 +10,10 @@
   position: relative;
 }
 
+.barra-superior {
+  position: relative;
+}
+
 .seleccion {
   display: flex;
   align-items: center;
@@ -57,15 +61,17 @@
   width: 100%;
 }
 
-.btn-inicio {
+/* CONTENEDOR DE BOTONES */
+.btns-superior {
   display: flex;
+  align-items: center;
+  gap: 1rem;
   position: absolute;
   top: 1.5rem;
   right: 2rem;
-  align-items: center;
-  gap: 0.5rem;
 }
 
+/* ESTILO GENERAL PARA LOS BOTONES */
 .btn-white {
   display: flex;
   align-items: center;
@@ -78,6 +84,14 @@
   font-weight: bold;
   font-size: 1.2rem;
   cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto hover para los botones */
+.btn-white:hover {
+  background-color: black;
+  color: white;
 }
 
 .elecciones {
@@ -112,7 +126,7 @@
 
 .feed img {
   width: 100%;
-  max-width: 1790px;
+  max-width: 1200px;
   height: auto;
   border-radius: 8px;
   cursor: pointer;
@@ -141,11 +155,14 @@
 }
 
 @media screen and (max-width: 768px) {
-  .btn-inicio {
-    position: static;
+  .btns-superior {
+    position: relative;
+    top: 0;
+    right: 0;
     margin-top: 1rem;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 1rem;
   }
 
   .seleccion {
@@ -182,7 +199,7 @@
   }
 }
 
-/* Fade-in */
+/* Animación de aparición */
 .fade-in {
   opacity: 0;
   animation: fadeIn 0.6s ease forwards;

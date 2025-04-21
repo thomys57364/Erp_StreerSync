@@ -9,25 +9,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <section class="superior-section fade-in">
-        <div class="barra-superior"> <!-- NUEVO CONTENEDOR -->
-        <div class="seleccion">
-            <h1 class="titulo fade-in" onclick="location.href='../../eleccion_genero/eleccion.html'">DEUSS</h1>
-            <div class="seleccionar-genero fade-in">
-            <h2 class="seleccion1 fade-in"  onclick="location.href='../parte_mujer/mujer.html'">Mujer</h2>
-            <h2 class="seleccion2 fade-in"  onclick="location.href='../../generos/parte_hombre/hombre.html'">Hombre</h2>
+
+    <section class="superiror-section fade-in">
+        <div class="barra-superior">
+            <div class="seleccion">
+                <h1 class="titulo fade-in" onclick="location.href='../../eleccion_genero/eleccion.html'">DEUSS</h1>
+                <div class="seleccionar-genero fade-in">
+                    <h2 class="seleccion1 fade-in" onclick="location.href='../parte_mujer/mujer.html'">Mujer</h2>
+                    <h2 class="seleccion2 fade-in" onclick="location.href='../../generos/parte_hombre/hombre.html'">Hombre</h2>
+                </div>
+            </div>
+
+            <!-- BOTONES UNIFICADOS -->
+            <div class="btns-superior fade-in">
+                <button class="btn-white" onclick="location.href='../../login_pagina/login.html'">
+                    <i class="fa-solid fa-user"></i> Iniciar Sesión
+                </button>
+                <button class="btn-white" onclick="location.href='../../carrito/carrito.html'">
+                    <i class="fa-solid fa-cart-shopping"></i> Carrito
+                </button>
             </div>
         </div>
-
-        <div class="btn-inicio fade-in">
-            <button class="btn-white" onclick="location.href='../../login_pagina/login.html'">
-            <i class="fa-solid fa-user"></i>
-            Iniciar Sesión
-            </button>
-        </div>
-        </div>
     </section>
-
 
     <section class="elecciones fade-in">
         <div class="elecciones">
@@ -42,7 +45,7 @@
         <img src="../../Imagenes/fotofeed.png" alt="Feed" class="feed-image">
     </section>
 
-    
+    <script src="hombre.js"></script>
+
 </body>
-<script src="hombre.js"></script>
 </html>
