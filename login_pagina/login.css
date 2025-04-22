@@ -85,6 +85,23 @@
         cursor: pointer;
         margin-bottom: 15px;
     }
+
+    .submit:hover {
+        background: #1a1a1a; /* Un negro ligeramente más claro */
+        box-shadow: 0 0 px black;
+        transform: scale(1.02); /* (Opcional) Ligeramente más grande */
+        transition: all 0.3s ease;
+    }
+
+    .animar-glow:hover {
+        animation-play-state: paused;
+        transform: scale(1.05);
+        box-shadow: 0 0 20px black;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    
+
     .form-links {
         text-align: center;
         font-size: 14px;

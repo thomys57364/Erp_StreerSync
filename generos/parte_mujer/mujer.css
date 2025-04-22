@@ -94,11 +94,7 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hover elegante */
-.btn-white:hover {
-    background-color: black;
-    color: white;
-}
+
 
 .elecciones {
     display: flex;
